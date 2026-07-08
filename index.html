@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aetheris — Agentic Competitive Intelligence</title>
+    <meta name="description" content="Track every competitor. Predict every market shift. Automatically. Aetheris runs specialized AI agents that watch your category around the clock." />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <script>
+      window.addEventListener('error', function(e) {
+        var div = document.createElement('div');
+        div.style.position = 'fixed';
+        div.style.top = '0';
+        div.style.left = '0';
+        div.style.width = '100%';
+        div.style.background = '#FEE2E2';
+        div.style.color = '#991B1B';
+        div.style.padding = '16px';
+        div.style.zIndex = '99999';
+        div.style.borderBottom = '2px solid #EF4444';
+        div.style.fontFamily = 'monospace';
+        div.style.fontSize = '12px';
+        div.style.whiteSpace = 'pre-wrap';
+        div.style.maxHeight = '50vh';
+        div.style.overflow = 'auto';
+        div.innerHTML = '<strong>[Runtime Error]</strong> ' + e.message + '\nStack:\n' + (e.error ? e.error.stack : 'N/A');
+        document.body.appendChild(div);
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        var div = document.createElement('div');
+        div.style.position = 'fixed';
+        div.style.top = '0';
+        div.style.left = '0';
+        div.style.width = '100%';
+        div.style.background = '#FEF3C7';
+        div.style.color = '#92400E';
+        div.style.padding = '16px';
+        div.style.zIndex = '99999';
+        div.style.borderBottom = '2px solid #F59E0B';
+        div.style.fontFamily = 'monospace';
+        div.style.fontSize = '12px';
+        div.style.whiteSpace = 'pre-wrap';
+        div.style.maxHeight = '50vh';
+        div.style.overflow = 'auto';
+        div.innerHTML = '<strong>[Unhandled Promise Rejection]</strong> ' + e.reason + '\nStack:\n' + (e.reason && e.reason.stack ? e.reason.stack : 'N/A');
+        document.body.appendChild(div);
+      });
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/main.jsx"></script>
+  </body>
+</html>
